@@ -7,7 +7,7 @@ const authenticate = require("../middleware/authenticate");
 router.get("/",authenticate,productController.getAllProducts);
 router.get("/id/:id",authenticate,productController.findProductById);
 router.get("/search",authenticate,productController.findProductsBySearch); 
-router.post("/category",authenticate,productController.searchProductsByCategory); 
-
+router.post("/category",productController.searchProductsByCategory); 
+ 
 
 module.exports=router;
